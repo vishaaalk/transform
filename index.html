@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{
+            margin: 30px auto;
+            max-width: 1000px;
+            width: 90vw;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            font-family: sans-serif;
+        }
+        .box{
+            width: calc(15%);
+            margin: 0px 10px;
+            background-color: white;
+            cursor: pointer;
+            color: blue;
+            text-align: center;
+            line-height: 30px;
+        }
+        .blue{
+            background-color: rgba(56, 207, 245, 0.5);
+        }
+        .scale{
+            transform: scale(1);
+            transition: transform 0.5s ease;
+        }
+        .box:hover .scale{
+            transform: scale(2);
+        }
+    
+        .scaleX{
+            transform: scaleX(1);
+            transition: transform 0.5s ease;
+        }
+        .box:hover .scaleX{
+            transform: scaleX(2);
+        }
+        .scaleY{
+            transform: scaleY(1);
+            transition: transform 0.5s ease;
+        }
+        .box:hover .scaleY{
+            transform: scaleY(2);
+        }
+        .scaleZ{
+            transform: scaleZ(1);
+            transition: transform 0.5s ease;
+        }
+        .box:hover .scaleZ{
+            transform: scale(0.5, 1);
+        }
+        .translateX{
+            transform: translateX(5px);
+            transition: transform 0.5s ease;
+        }
+        .box:hover .translateX{
+            transform: translateX(20px);
+        }
+        .translateY{
+            transform: translateY(5px);
+            transition: transform 0.5s ease;
+        }
+        .box:hover .translateY{
+            transform: translateY(20px);
+        }
+        .translateZ{
+            transform: translateZ(5px);
+            transition: transform 0.5s ease;
+        }
+        .box:hover .translateZ{
+            transform: translate(200px);
+        }
+        .t{
+            transform: translate(5px);
+            transition: transform 0.5s ease;
+        }
+        .box:hover .t{
+            transform: translate(60px, 50px);
+        }
+      
+        .rotate{
+            transform:  rotate(0);
+            transition: transform 0.5s ease;
+        }
+        .box:hover .rotate{
+            transform:  rotate(102deg);
+        }
+    
+        .rotateX{
+            transform:  rotateX(1);
+            transition: transform 0.5s ease;
+        }
+        .box:hover .rotateX{
+            transform:  rotateX(102deg);
+        }
+        .rotateY{
+            transform:  rotateY(1);
+            transition: transform 0.5s ease;
+        }
+        .box:hover .rotateY{
+            transform:  rotateY(102deg);
+        }
+        .rotateZ{
+            transform:  rotateZ(1);
+            transition: transform 0.5s ease;
+        }
+        .box:hover .rotateZ{
+            transform:  rotateZ(140deg);
+        }
+        .skew{
+            transform:  skew(0);
+            transition: transform 0.5s ease;
+        }
+        .box:hover .skew{
+            transform:  skew(302deg);
+        }
+    
+        .skewX{
+            transform:  skewX(1);
+            transition: transform 0.5s ease;
+        }
+        .box:hover .skewX{
+            transform:  skewX(102deg);
+        }
+        .skewY{
+            transform:  skewY(1);
+            transition: transform 0.5s ease;
+        }
+        .box:hover .skewY{
+            transform:  skewY(102deg);
+        }
+        .skewZ{
+            transform:  skew(1);
+            transition: transform 0.5s ease;
+        }
+        .box:hover .skewZ{
+         transform: skew(.352rad);
+        }
+        .matrix{
+            transform:  matrix(0);
+            transition: transform 0.5s ease;
+        }
+        .box:hover .matrix{
+            transform:  matrix(1, -0.3, 0, 1, 0, 0);
+        }
+       
+        .linear {transition-timing-function: linear;
+            width: 100px;
+  height: 100px;
+  background: red;
+  margin: 5px;
+  transition: width 2s;}
+.ease {transition-timing-function: ease;
+    width: 100px;
+  height: 100px;
+  margin: 5px;
+  background: red;
+  transition: width 2s;}
+.ease-in {transition-timing-function: ease-in;
+    width: 100px;
+  height: 100px;
+  margin: 5px;
+  background: red;
+  transition: width 2s;}
+.ease-out {transition-timing-function: ease-out;
+    width: 100px;
+  height: 100px;
+  background: red;
+  margin: 5px;
+  transition: width 2s;}
+.ease-in-out {transition-timing-function: ease-in-out;
+    width: 100px;
+  height: 100px;
+  margin: 5px;
+  background: red;
+  transition: width 2s;}
+.box:hover {
+  width: 300px;
+}
+    </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="box">
+        <div class="blue scale">
+            scale
+        </div>
+    </div>
+    <div class="box">
+        <div class="blue scaleX">
+            scaleX
+        </div>
+    </div>
+    <div class="box">
+        <div class="blue scaleY">
+            scaleY
+        </div>
+    </div>
+    <div class="box">
+        <div class="blue scaleZ">
+            scaleZ
+        </div>
+    </div>
+  </div>  
+  <div class="wrap">
+    <div class="box">
+        <div class="blue t">
+            translate
+        </div>
+    </div>
+    <div class="box">
+        <div class="blue translateX">
+            translateX
+        </div>
+    </div>
+    <div class="box">
+        <div class="blue translateY">
+            translateY
+        </div>
+    </div>
+    <div class="box">
+        <div class="blue translateZ">
+            translateZ
+        </div>
+    </div>
+  </div>  
+  
+  <div class="wrap">
+    <div class="box">
+        <div class="blue  rotate">
+            rotate
+        </div>
+    </div>
+    <div class="box">
+        <div class="blue  rotateX">
+            rotateX
+        </div>
+    </div>
+    <div class="box">
+        <div class="blue rotateY">
+            rotateY
+        </div>
+    </div>
+    <div class="box">
+        <div class="blue rotateZ">
+            rotateZ
+        </div>
+    </div>
+  </div>    
+  <div class="wrap">
+    <div class="box">
+        <div class="blue skew">
+            skew
+        </div>
+    </div>
+    <div class="box">
+        <div class="blue skewX">
+            skewX
+        </div>
+    </div>
+    <div class="box">
+        <div class="blue skewY">
+            skewY
+        </div>
+    </div>
+    <div class="box">
+        <div class="blue skewZ">
+            skewZ
+        </div>
+    </div>
+  </div>  
+  <div class="wrap">
+    <div class="box">
+        <div class="blue matrix">
+            matrix 
+        </div>
+    </div>
+    <div class="wrap"> 
+    <div class="box">
+<div class="box linear">linear</div>
+<div class="box ease">ease</div>
+<div class="box ease-in">ease-in</div>
+<div class="box ease-out">ease-out</div>
+<div class="box ease-in-out">ease-in-out</div>
+
+    </div>
+  </div>  
+</body>
+</html>
